@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#3ebcd3</color>
+    <color name="theme">#3ebcd3</color>
+    <color name="unselect">#b1ced3</color>
+    <color name="fengeline">#d2d2d2</color>
+    <color name="white">#ffffff</color>
+    <color name="col666">#666666</color>
+    <color name="col999">#999999</color>
+    <color name="colebeded">#ebeded</color>
+    <color name="col32">#323232</color>
+    <color name="yelff8d4e">#ff8d4e</color>
+    <!--hp-->
+    <color name="color3">#333333</color>
+    <color name="color6">#666666</color>
+    <color name="color9">#999999</color>
+    <color name="dividerColor">#d1d1d1</color>
+    <color name="blue46">#46b9ce</color>
+    <color name="bg_grey">#ebeded</color>
+    <color name="black_normal_color">#323232</color>
+    <color name="org_fd945a">#fd945a</color>
+    <color name="grey_be">#bebebe</color>
+</resources>
