@@ -1,9 +1,9 @@
-package com.guo.market.util;
+package com.forest.market.util;
 
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.guo.market.App;
+import com.forest.market.App;
 
 /**
  * Created by guoqingwen on 2016/07/28 14:05

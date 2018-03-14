@@ -1,10 +1,10 @@
-package com.guo.market.activity;
+package com.forest.market.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.guo.market.R;
-import com.guo.market.activity.base.BaseActivity;
+import com.forest.market.R;
+import com.forest.market.activity.base.BaseActivity;
 
 public class MainActivity extends BaseActivity
 {

@@ -1,4 +1,4 @@
-package com.guo.market.net;
+package com.forest.market.net;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -7,8 +7,8 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 
-import com.guo.market.App;
-import com.guo.market.util.ToastUtil;
+import com.forest.market.App;
+import com.forest.market.util.ToastUtil;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

@@ -1,7 +1,7 @@
-package com.guo.market.activity.user;
+package com.forest.market.activity.user;
 
-import com.guo.market.R;
-import com.guo.market.activity.base.BaseActivity;
+import com.forest.market.R;
+import com.forest.market.activity.base.BaseActivity;
 
 /**
  * Created by qingwenguo on 2018/3/4.

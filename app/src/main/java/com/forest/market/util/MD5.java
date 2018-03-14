@@ -1,4 +1,4 @@
-package com.guo.market.util;
+package com.forest.market.util;
 
 import java.security.MessageDigest;
 
