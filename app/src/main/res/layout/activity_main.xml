@@ -81,7 +81,7 @@ x`
                 android:id="@+id/tv_main_referee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="推荐人"
+                android:text="xxx"
                 android:layout_marginTop="5px"
                 android:textSize="@dimen/size23"
                 android:textColor="@color/unselect"

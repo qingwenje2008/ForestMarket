@@ -17,7 +17,8 @@ import butterknife.BindView;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener
 {
-
+    @BindView(R.id.view)
+    View view;
     @BindView(R.id.iv_title_back)
     ImageView iv_title_back;
     @BindView(R.id.tv_title_name)
@@ -44,7 +45,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener
     protected int getLayoutId() {
         return R.layout.activity_login;
     }
-
+    @Override
+    protected void initImmersionBar() {
+        super.initImmersionBar();
+        mImmersionBar.titleBar(view).init();
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()){

@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.forest.market.R;
 import com.forest.market.activity.base.BaseActivity;
+import com.forest.market.fragment.MarketFragment;
 import com.forest.market.fragment.MineFragment;
 
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ import java.util.List;
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
+    @BindView(R.id.view)
+    View view;
     @BindView(R.id.iv_main_home)
     ImageView iv_main_home;
     @BindView(R.id.iv_main_referee)
@@ -64,7 +67,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 //        fragmentList.add(ShengHuaQuanFragment.newInstance());
 //        fragmentList.add(RefereeFragment.newInstance());
 //        fragmentList.add(ActivityFragment.newInstance());
-        fragmentList.add(MineFragment.newInstance());
+        fragmentList.add(MarketFragment.newInstance());
         fragmentList.add(MineFragment.newInstance());
         fragmentList.add(MineFragment.newInstance());
 
@@ -91,7 +94,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         setCurrent(0);
 
     }
-
+    @Override
+    protected void initImmersionBar() {
+        super.initImmersionBar();
+        mImmersionBar.titleBar(view).init();
+    }
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
