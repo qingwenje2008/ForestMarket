@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/theme" />
     <FrameLayout
         android:id="@+id/main_framelayout"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/line_main"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        >
     </FrameLayout>
+
     <TextView
         android:id="@+id/line_main"
         android:layout_width="match_parent"
@@ -20,7 +25,7 @@
         android:background="@color/fengeline"
         android:layout_above="@+id/lin_menu"
         />
-x`
+
     <LinearLayout
         android:id="@+id/lin_menu"
         android:layout_width="match_parent"
@@ -28,9 +33,7 @@ x`
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+      >
 
         <LinearLayout
             android:id="@+id/main_home_layout"
@@ -119,4 +122,4 @@ x`
 
 
 
-</RelativeLayout>
+</LinearLayout>
