@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#00000000</color>
-    <color name="colorAccent">#3ebcd3</color>
-    <color name="theme">#3ebcd3</color>
+    <color name="colorAccent">#00CD66</color>
+    <color name="theme">#00CD66</color>
     <color name="unselect">#b1ced3</color>
     <color name="fengeline">#d2d2d2</color>
     <color name="white">#ffffff</color>

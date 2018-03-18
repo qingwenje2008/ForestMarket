@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_auth"
+        layout="@layout/include_title_bar" />
+
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_marginTop="@dimen/size50"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="@dimen/size30"
+        android:layout_height="88px"
+        android:paddingLeft="@dimen/size25"
+        android:paddingRight="@dimen/size25"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_shouji"
+        android:gravity="center_vertical"
+        android:drawablePadding="20px"
+        android:inputType="number"
+        android:hint="请输入姓名"
+        android:singleLine="true"
+        android:textColor="@color/col666"
+        android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginLeft="@dimen/size50"
+            android:layout_marginRight="@dimen/size50"
+            android:layout_marginTop="40px"
+            android:textSize="34px"
+            android:textColor="@color/white"
+            android:text="保存"
+            android:gravity="center"
+            android:background="@drawable/bg_button_theme5" />
+
+
+</LinearLayout>

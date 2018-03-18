@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/iv_mine_icon"
-                android:layout_width="138px"
-                android:layout_height="138px"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
                 android:scaleType="fitXY"
                 android:src="@mipmap/img_dashentouxiang" />
 

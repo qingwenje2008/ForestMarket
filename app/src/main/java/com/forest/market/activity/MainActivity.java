@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.forest.market.R;
 import com.forest.market.activity.base.BaseActivity;
+import com.forest.market.fragment.CommonwealFragment;
 import com.forest.market.fragment.MarketFragment;
 import com.forest.market.fragment.MineFragment;
 
@@ -63,12 +64,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         supportFragmentManager = getSupportFragmentManager();
 
         fragmentList = new ArrayList<>();
-//        fragmentList.add(HomeFragment.newInstance());
-//        fragmentList.add(ShengHuaQuanFragment.newInstance());
-//        fragmentList.add(RefereeFragment.newInstance());
-//        fragmentList.add(ActivityFragment.newInstance());
         fragmentList.add(MarketFragment.newInstance());
-        fragmentList.add(MineFragment.newInstance());
+        fragmentList.add(CommonwealFragment.newInstance());
         fragmentList.add(MineFragment.newInstance());
 
         mImageViews = new ImageView[3];
@@ -82,7 +79,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
         mLayouts = new View[3];
         mLayouts[0] = main_home_layout;
-//        LogUtil.i(mLayouts[0]+"----");
         mLayouts[1] = main_referee;
         mLayouts[2] = main_my_layout;
 

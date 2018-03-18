@@ -12,7 +12,7 @@
         android:background="@color/theme" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="44dp"
         android:background="@color/theme">
 
         <ImageView
@@ -31,7 +31,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="19sp" />
 
         <ImageView
             android:id="@+id/iv_title_right"
