@@ -80,7 +80,8 @@ public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder>
     }
 
     public int getMyItemCount() {
-        return list.size();
+
+        return list.size()==0?10:list.size();
     }
 
     public T getItem(int pos) {
