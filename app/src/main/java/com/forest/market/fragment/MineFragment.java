@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.forest.market.R;
 import com.forest.market.activity.user.MyInfoActivity;
+import com.forest.market.activity.user.SettingActivity;
 import com.forest.market.fragment.base.BaseFragment;
 
 import butterknife.BindView;
@@ -69,7 +70,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
 //                openActivity(LoginActivity.class);
                 break;
             case R.id.tv_setting:
-//                openActivity(SettingActivity.class,null);
+                openActivity(SettingActivity.class,null);
                 break;
             case R.id.iv_mine_icon:
 //                openActivity(LoginActivity.class);

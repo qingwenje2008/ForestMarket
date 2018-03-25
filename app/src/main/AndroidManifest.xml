@@ -43,6 +43,7 @@
         <activity android:name=".activity.user.UpdateNameActivity"/>
         <activity android:name=".activity.user.ForgetPasswordActivity"/>
         <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.user.SettingActivity"/>
 
     </application>
 

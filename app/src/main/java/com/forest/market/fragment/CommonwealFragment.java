@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.forest.market.R;
 import com.forest.market.adapter.commonweal.CommonwealAdapter;
+import com.forest.market.adapter.commonweal.RankAdapter;
 import com.forest.market.fragment.base.BaseFragment;
 import com.forest.market.widget.RefreshRecyclerView;
 
@@ -19,13 +20,13 @@ public class CommonwealFragment extends BaseFragment implements View.OnClickList
     TextView tv_title_name;
     @BindView(R.id.recycler)
     RefreshRecyclerView recycler;
-    CommonwealAdapter adapter;
+    RankAdapter adapter;
 
 
     @Override
     protected void initData() {
         tv_title_name.setText("公益");
-        adapter=new CommonwealAdapter(context);
+        adapter=new RankAdapter(context);
         //配置当前的主recycler
         recycler.setLayoutManager(new GridLayoutManager(context, 1));
 

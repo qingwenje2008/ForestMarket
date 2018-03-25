@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_mian"
+    android:layout_height="match_parent"
+    android:background="#ebeded"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_bar" />
+
+        <LinearLayout
+            android:id="@+id/lin_update_password"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:paddingLeft="30px"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/size30"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size30"
+                android:textColor="#666666"
+                android:layout_weight="1"
+                android:text="修改密码" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:drawablePadding="@dimen/size20"
+                android:drawableRight="@mipmap/nav_back_right"
+                android:textColor="#999999"
+                android:text="" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d1d1d1" />
+        <LinearLayout
+            android:id="@+id/lin_about"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:paddingLeft="30px"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/size30"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size30"
+                android:textColor="#666666"
+                android:layout_weight="1"
+                android:text="关于我们" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:drawablePadding="@dimen/size20"
+                android:drawableRight="@mipmap/nav_back_right"
+                android:textColor="#999999"
+                android:text="" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_exit"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:paddingLeft="30px"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="@dimen/size30"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size36"
+            android:textStyle="bold"
+            android:textColor="@color/theme"
+            android:text="退出账号" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

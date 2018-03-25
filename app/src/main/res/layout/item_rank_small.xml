@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingRight="@dimen/size30"
+        android:paddingLeft="@dimen/size30"
+        android:layout_height="120px">
+    <TextView
+        android:id="@+id/tv_fans_contribution_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginRight="@dimen/size40"
+        android:textSize="@dimen/size36"
+        android:textColor="#333333"
+         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_fans_contribution_head"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size80"
+            android:src="@mipmap/img_dashentouxiang"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/size20"
+            >
+            <TextView
+                android:id="@+id/tv_fans_contribution_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="宝宝不乖"
+                android:textSize="@dimen/size30"
+                android:textColor="#333333"
+                />
+            <TextView
+                android:id="@+id/tv_fans_contribution_contri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贡献:30"
+                android:textSize="24px"
+                android:textColor="#999999"
+                android:layout_marginTop="@dimen/size20"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d1d1d1"
+        />
+
+</LinearLayout>
