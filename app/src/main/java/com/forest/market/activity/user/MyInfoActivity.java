@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.forest.market.R;
 import com.forest.market.activity.MainActivity;
 import com.forest.market.activity.base.BaseActivity;
+import com.forest.market.activity.base.GetPhotoActivity;
 import com.forest.market.util.ToastUtil;
 
 import butterknife.BindView;
@@ -16,7 +17,7 @@ import butterknife.BindView;
  * Created by qingwenguo on 2018/3/18.
  */
 
-public class MyInfoActivity extends BaseActivity implements View.OnClickListener {
+public class MyInfoActivity extends GetPhotoActivity implements View.OnClickListener {
     @BindView(R.id.view)
     View view;
     @BindView(R.id.iv_title_back)
@@ -63,7 +64,7 @@ public class MyInfoActivity extends BaseActivity implements View.OnClickListener
                 finish();
                 break;
             case R.id.lin_icon:
-                finish();
+                selectPhoto(1, 1);
                 break;
             case R.id.lin_name:
                 openActivity(UpdateNameActivity.class,null);
@@ -72,5 +73,10 @@ public class MyInfoActivity extends BaseActivity implements View.OnClickListener
 
 
         }
+    }
+    @Override
+    protected void onCrop(String path) {
+        super.onCrop(path);
+//        uploadPicHelper.upload(path, Constants.AVATAR);
     }
 }
