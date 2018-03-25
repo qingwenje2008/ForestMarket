@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingBottom="10px"
+    android:layout_height="match_parent">
+    />
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/col32"
+        android:textSize="@dimen/size24"
+        android:text="朝歌大王"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ："
+        />
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/col32"
+        android:textSize="@dimen/size24"
+        android:text="另是右嘞虹工火化男 地工草叶jklf野草   地苗曝霸是  同嘞火星人糢lajf工  工戟昌革寺是地    韩日晶 jkkj 虽中中吕 中中中 中 中中中中国 为为 "
+        />
+</LinearLayout>

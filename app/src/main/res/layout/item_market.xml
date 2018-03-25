@@ -1,19 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:textSize="@dimen/size40"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:text="标题" />
-
-    <TextView
-        android:id="@+id/tv_desc"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我是一个描述，我是一个描述，我是一个描述，" />
+        android:layout_margin="@dimen/size20"
+        >
+
+        <ImageView
+            android:id="@+id/iv_head_icon"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size80"
+            android:src="@mipmap/img_dashentouxiang"
+            android:layout_centerVertical="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/iv_head_icon"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="宝宝不乖"
+                android:textSize="@dimen/size30"
+                android:textColor="#323232"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.12.28 15:45"
+                android:textSize="@dimen/size24"
+                android:textColor="#999999"
+                android:layout_marginTop="@dimen/size10"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_focus"
+            android:visibility="gone"
+            android:layout_width="@dimen/size100"
+            android:layout_height="@dimen/size44"
+            android:layout_alignParentRight="true"
+            android:text="+关注"
+            android:textSize="@dimen/size24"
+            android:textColor="@color/selector_isfocus"
+            android:background="@drawable/selector_bg_isfocus"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lin_quanzi"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="今天去国家大剧院观看了我国著名歌曲的《白毛女》，演员的演出太精彩了，感动得我都流眼泪了。。。"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginBottom="@dimen/size10"
+            android:textSize="@dimen/size24"
+            android:textColor="#333333"
+            />
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/size10"-->
+            <!--android:layout_marginRight="@dimen/size15"-->
+            <!--android:orientation="horizontal"-->
+            <!--&gt;-->
+
+            <com.forest.market.widget.NoScrollerGridView
+                android:id="@+id/grid_img"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                android:numColumns="3"
+                android:divider="@null"
+                android:horizontalSpacing="5px"
+                android:verticalSpacing="5px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已打赏30个礼物"
+            android:drawableLeft="@mipmap/dd"
+            android:drawablePadding="10px"
+            android:gravity="center_vertical"
+            android:padding="20px"
+            android:textSize="@dimen/size22"
+            android:textColor="@color/col32"
+            />
+
+        <ImageView
+            android:id="@+id/iv_zan"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:scaleType="center"
+            android:clickable="true"
+            android:src="@mipmap/dz"
+            />
+        <ImageView
+            android:id="@+id/iv_dashang"
+            android:layout_width="80px"
+            android:clickable="true"
+            android:layout_height="80px"
+            android:scaleType="center"
+            android:src="@mipmap/dz"
+            />
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@mipmap/dz"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="100人觉得很赞"
+        android:visibility="gone"
+        android:drawableLeft="@mipmap/dz"
+        android:drawablePadding="10px"
+        android:gravity="center_vertical"
+        android:padding="20px"
+        android:textSize="@dimen/size22"
+        android:textColor="@color/col32"
+        android:id="@+id/textView4" />
+
+    <com.forest.market.widget.NoScrollerListView
+        android:id="@+id/list_comment"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="20px"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <TextView
+        android:id="@+id/lookup_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看全部评论"
+        android:visibility="gone"
+        android:clickable="true"
+        android:drawableRight="@mipmap/nav_back_right"
+        android:drawablePadding="10px"
+        android:paddingTop="15px"
+        android:gravity="right|center_vertical"
+        android:paddingRight="20px"
+        android:textSize="@dimen/size22"
+        android:textColor="@color/col999"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="64px"
+        android:layout_margin="20px"
+        android:hint="评论..."
+        android:visibility="gone"
+        android:background="@drawable/bg_comment_edit_shape"
+        android:padding="10px"
+        android:drawablePadding="10px"
+        android:textSize="@dimen/size22"
+        android:textColor="@color/col32"
+        android:id="@+id/editText" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20px"
+        android:background="@color/fengeline"/>
+
 </LinearLayout>
