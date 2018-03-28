@@ -17,14 +17,14 @@ import butterknife.BindView;
 public class MineFragment extends BaseFragment implements View.OnClickListener{
     @BindView(R.id.tv_myInfo)
     TextView tv_myInfo;
-    @BindView(R.id.tv_mySchool)
-    TextView tv_mySchool;
-    @BindView(R.id.tv_instrest)
-    TextView tv_instrest;
+//    @BindView(R.id.tv_mySchool)
+//    TextView tv_mySchool;
+//    @BindView(R.id.tv_instrest)
+//    TextView tv_instrest;
     @BindView(R.id.tv_myFavourite)
     TextView tv_myFavourite;
-    @BindView(R.id.tv_trRecord)
-    TextView tv_trRecord;
+//    @BindView(R.id.tv_trRecord)
+//    TextView tv_trRecord;
     @BindView(R.id.tv_setting)
     TextView tv_setting;
     @BindView(R.id.iv_mine_icon)
@@ -32,11 +32,11 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
 
     @Override
     protected void initData() {
-        tv_instrest.setOnClickListener(this);
+//        tv_instrest.setOnClickListener(this);
         tv_myFavourite.setOnClickListener(this);
         tv_myInfo.setOnClickListener(this);
-        tv_mySchool.setOnClickListener(this);
-        tv_trRecord.setOnClickListener(this);
+//        tv_mySchool.setOnClickListener(this);
+//        tv_trRecord.setOnClickListener(this);
         tv_setting.setOnClickListener(this);
         iv_mine_icon.setOnClickListener(this);
     }
@@ -57,18 +57,18 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
                 openActivity(MyInfoActivity.class,null);
                 break;
 
-            case R.id.tv_mySchool:
-//                openActivity(LoginActivity.class);
-                break;
-            case R.id.tv_instrest:
-//                openActivity(LoginActivity.class);
-                break;
+//            case R.id.tv_mySchool:
+////                openActivity(LoginActivity.class);
+//                break;
+//            case R.id.tv_instrest:
+////                openActivity(LoginActivity.class);
+//                break;
             case R.id.tv_myFavourite:
 //                openActivity(LoginActivity.class);
                 break;
-            case R.id.tv_trRecord:
-//                openActivity(LoginActivity.class);
-                break;
+//            case R.id.tv_trRecord:
+////                openActivity(LoginActivity.class);
+//                break;
             case R.id.tv_setting:
                 openActivity(SettingActivity.class,null);
                 break;
