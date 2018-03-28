@@ -12,10 +12,20 @@ public class ImageUtil {
 
     private static DisplayImageOptions option;
     private static int lastRes;
-
-    public static void loadImage(ImageView imageView, String path) {
-        loadImage(imageView, path, 0);
+    public static String loadImage(String path) {
+        if (path == null) {
+            return "";
+        }
+//        if (!path.startsWith("http")) {
+//            path = Constants.ROOT_URL + path;
+//            return path;
+//        }
+        return path;
     }
+
+//    public static void loadImage(ImageView imageView, String path) {
+//        loadImage(imageView, path, 0);
+//    }
 
     public static void loadImageFromFile(ImageView imageView, String path) {
         ImageLoader.getInstance().displayImage("file:///"+path,imageView);

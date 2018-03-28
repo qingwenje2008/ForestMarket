@@ -39,6 +39,8 @@
             android:launchMode="singleTask"
             />
         <activity android:name=".activity.base.CropActivity"/>
+        <activity android:name=".activity.user.AboutUsActivity"/>
+        <activity android:name=".activity.market.SendMarketActivity"/>
         <activity android:name=".activity.user.MyInfoActivity"/>
         <activity android:name=".activity.user.UpdateNameActivity"/>
         <activity android:name=".activity.user.ForgetPasswordActivity"/>

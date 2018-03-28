@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.forest.market.R;
 import com.forest.market.activity.base.GetPhotoActivity;
+import com.forest.market.dialog.RAlertDialog;
 
 import butterknife.BindView;
 
@@ -14,21 +15,20 @@ import butterknife.BindView;
  * Created by qingwenguo on 2018/3/18.
  */
 
-public class SettingActivity extends GetPhotoActivity implements View.OnClickListener {
+public class SettingActivity extends GetPhotoActivity implements View.OnClickListener, RAlertDialog.OnConfirmClickListener {
     @BindView(R.id.view)
     View view;
     @BindView(R.id.iv_title_back)
     ImageView iv_title_back;
     @BindView(R.id.tv_title_name)
     TextView tv_title_name;
-
-
     @BindView(R.id.lin_update_password)
     LinearLayout lin_update_password;
     @BindView(R.id.lin_about)
     LinearLayout lin_about;
     @BindView(R.id.lin_exit)
     LinearLayout lin_exit;
+    private RAlertDialog closeDialog;
     @Override
     protected void initData() {
         iv_title_back.setVisibility(View.VISIBLE);
@@ -38,6 +38,10 @@ public class SettingActivity extends GetPhotoActivity implements View.OnClickLis
         lin_update_password.setOnClickListener(this);
         lin_about.setOnClickListener(this);
         lin_exit.setOnClickListener(this);
+
+        closeDialog = new RAlertDialog(this);
+        closeDialog.setMsg("是否退出登录");
+        closeDialog.setOnConfirmClickListener(this);
     }
     @Override
     protected void initImmersionBar() {
@@ -58,7 +62,7 @@ public class SettingActivity extends GetPhotoActivity implements View.OnClickLis
             case R.id.lin_update_password:
                 break;
             case R.id.lin_about:
-//                openActivity(UpdateNameActivity.class,null);
+                openActivity(AboutUsActivity.class,null);
                 break;
             case R.id.lin_exit:
 //                openActivity(UpdateNameActivity.class,null);
@@ -72,5 +76,10 @@ public class SettingActivity extends GetPhotoActivity implements View.OnClickLis
     protected void onCrop(String path) {
         super.onCrop(path);
 //        uploadPicHelper.upload(path, Constants.AVATAR);
+    }
+
+    @Override
+    public void onConfirmClick(int type) {
+        finish();
     }
 }
