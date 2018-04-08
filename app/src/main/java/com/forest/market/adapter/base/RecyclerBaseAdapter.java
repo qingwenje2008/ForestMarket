@@ -92,11 +92,11 @@ public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder>
     public void onClick(View v) {
         int pos = (int) v.getTag();
         if (onItemClickListener != null) {
-            onItemClickListener.onItemClick(pos);
+            onItemClickListener.onItemClick(pos,v);
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int pos);
+        void onItemClick(int pos,View v);
     }
 }

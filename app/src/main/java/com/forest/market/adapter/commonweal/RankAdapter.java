@@ -73,7 +73,7 @@ public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHo
 
     @Override
     public int getItemCount() {
-        return 6;
+        return 10;
     }
 
     protected class ViewHolderBig extends RecyclerView.ViewHolder {
