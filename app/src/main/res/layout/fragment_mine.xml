@@ -10,8 +10,8 @@
         android:id="@+id/rl_mine_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="40px"
-        android:paddingBottom="40px"
+        android:paddingTop="80px"
+        android:paddingBottom="80px"
         android:background="@color/theme">
         <RelativeLayout
             android:id="@+id/rl_my_icon"
@@ -91,51 +91,51 @@
                 android:layout_height="1px"
                 android:background="#ebeded" />
 
-            <TextView
-                android:id="@+id/tv_mySchool"
-                android:layout_width="match_parent"
-                android:background="@color/white"
-                android:layout_height="88px"
-                android:paddingLeft="@dimen/size30"
-                android:paddingRight="@dimen/size30"
-                android:clickable="true"
-                android:drawableLeft="@mipmap/school"
-                android:drawablePadding="20px"
-                android:drawableRight="@mipmap/nav_back_right"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:text="我的学校"
-                android:textColor="#333333"
-                android:textSize="30px" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_mySchool"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:layout_height="88px"-->
+                <!--android:paddingLeft="@dimen/size30"-->
+                <!--android:paddingRight="@dimen/size30"-->
+                <!--android:clickable="true"-->
+                <!--android:drawableLeft="@mipmap/school"-->
+                <!--android:drawablePadding="20px"-->
+                <!--android:drawableRight="@mipmap/nav_back_right"-->
+                <!--android:focusable="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="我的学校"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="30px" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="#ebeded" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:background="#ebeded" />-->
 
 
-            <TextView
-                android:id="@+id/tv_instrest"
-                android:layout_width="match_parent"
-                android:layout_height="88px"
-                android:background="@color/white"
-                android:clickable="true"
-                android:paddingLeft="30px"
-                android:paddingRight="30px"
-                android:drawableLeft="@mipmap/intrest"
-                android:drawablePadding="20px"
-                android:drawableRight="@mipmap/nav_back_right"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:text="兴趣爱好"
-                android:textColor="#333333"
-                android:textSize="30px" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_instrest"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="88px"-->
+                <!--android:background="@color/white"-->
+                <!--android:clickable="true"-->
+                <!--android:paddingLeft="30px"-->
+                <!--android:paddingRight="30px"-->
+                <!--android:drawableLeft="@mipmap/intrest"-->
+                <!--android:drawablePadding="20px"-->
+                <!--android:drawableRight="@mipmap/nav_back_right"-->
+                <!--android:focusable="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="兴趣爱好"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="30px" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20px"
-                android:background="#ebeded"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="20px"-->
+                <!--android:background="#ebeded"-->
+                <!--/>-->
 
             <TextView
                 android:id="@+id/tv_myFavourite"
@@ -158,21 +158,21 @@
                 android:layout_height="1px"
                 android:background="#ebeded" />
 
-            <TextView
-                android:id="@+id/tv_trRecord"
-                android:layout_width="match_parent"
-                android:layout_height="88px"
-                android:paddingLeft="@dimen/size30"
-                android:paddingRight="@dimen/size30"
-                android:background="@color/white"
-                android:clickable="true"
-                android:drawableLeft="@mipmap/txrecord"
-                android:drawablePadding="20px"
-                android:drawableRight="@mipmap/nav_back_right"
-                android:gravity="center_vertical"
-                android:text="我的交易"
-                android:textColor="#333333"
-                android:textSize="30px" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_trRecord"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="88px"-->
+                <!--android:paddingLeft="@dimen/size30"-->
+                <!--android:paddingRight="@dimen/size30"-->
+                <!--android:background="@color/white"-->
+                <!--android:clickable="true"-->
+                <!--android:drawableLeft="@mipmap/txrecord"-->
+                <!--android:drawablePadding="20px"-->
+                <!--android:drawableRight="@mipmap/nav_back_right"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="我的交易"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="30px" />-->
 
             <TextView
                 android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.forest.market.R;
+import com.forest.market.activity.market.SendMarketActivity;
 import com.forest.market.adapter.commonweal.CommonwealAdapter;
 import com.forest.market.adapter.market.MarketAdapter;
 import com.forest.market.fragment.base.BaseFragment;
@@ -54,6 +55,7 @@ public class MarketFragment extends BaseFragment implements View.OnClickListener
         switch (v.getId()){
             case R.id.iv_title_right:
                 ToastUtil.showToast("添加");
+                openActivity(SendMarketActivity.class);
                 break;
         }
 
