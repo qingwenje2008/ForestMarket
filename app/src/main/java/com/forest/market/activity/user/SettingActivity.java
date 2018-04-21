@@ -60,6 +60,7 @@ public class SettingActivity extends GetPhotoActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.lin_update_password:
+                openActivity(UpdatePasswordActivity.class);
                 break;
             case R.id.lin_about:
                 openActivity(AboutUsActivity.class,null);

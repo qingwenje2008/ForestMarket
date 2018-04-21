@@ -12,11 +12,12 @@ import java.util.List;
 /**
  * Created by guoqingwen on 2016/08/10 16:41
  */
-public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> implements View.OnClickListener {
+public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> implements View.OnClickListener, View.OnLongClickListener {
     protected Context context;
     protected List<T> list;
     protected LayoutInflater inflater;
     private OnItemClickListener onItemClickListener;
+    private OnItemLongClickListener onItemLongClickListener;
 
     public RecyclerBaseAdapter(Context context) {
         this.context = context;
@@ -48,7 +49,9 @@ public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder>
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
-
+    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) {
+        this.onItemLongClickListener = onItemLongClickListener;
+    }
     @Override
     public abstract VH onCreateViewHolder(ViewGroup parent, int viewType);
 
@@ -61,6 +64,7 @@ public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder>
     public void onBindViewHolder(VH holder, int position) {
         holder.itemView.setTag(position);
         holder.itemView.setOnClickListener(this);
+        holder.itemView.setOnLongClickListener(this);
         if (position < list.size()) {
             onBindViewHolder(holder, list.get(position), position);
         } else {
@@ -96,7 +100,19 @@ public abstract class RecyclerBaseAdapter<T, VH extends RecyclerView.ViewHolder>
         }
     }
 
+    @Override
+    public boolean onLongClick(View v) {
+        int pos = (int) v.getTag();
+        if (onItemLongClickListener != null) {
+            onItemLongClickListener.onItemLongClick(pos);
+        }
+        return false;
+    }
+
     public interface OnItemClickListener {
         void onItemClick(int pos);
+    }
+    public interface OnItemLongClickListener {
+        void onItemLongClick(int pos);
     }
 }

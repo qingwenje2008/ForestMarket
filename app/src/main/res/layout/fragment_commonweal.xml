@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_setting"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical">
 
-<include layout="@layout/include_title_bar" />
+    >
 
-<com.forest.market.widget.RefreshRecyclerView
-    android:id="@+id/recycler"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    ></com.forest.market.widget.RefreshRecyclerView>
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_bar" />
+
+        <com.forest.market.widget.RefreshRecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.forest.market.widget.RefreshRecyclerView>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="@dimen/size100"
+        android:layout_height="@dimen/size100"
+        android:padding="10px"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/bg_image_radus50"
+        android:layout_margin="@dimen/size20"
+        android:src="@mipmap/add"
+        />
+</FrameLayout>
