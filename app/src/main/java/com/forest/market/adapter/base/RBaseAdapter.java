@@ -27,6 +27,11 @@ public abstract class RBaseAdapter<T, VH extends RBaseAdapter.ViewHolder> extend
         this.list = new ArrayList<T>();
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
     public int getSelectIndex() {
         return selectIndex;
     }
@@ -100,7 +105,6 @@ public abstract class RBaseAdapter<T, VH extends RBaseAdapter.ViewHolder> extend
             notifyDataSetChanged();
         }
     }
-
     public int getCount() {
         return list == null ? 0 : list.size();
     }
@@ -128,19 +132,19 @@ public abstract class RBaseAdapter<T, VH extends RBaseAdapter.ViewHolder> extend
         return position;
     }
 
-    @Override
+//    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         VH vh;
         if (convertView == null) {
-            convertView = inflater.inflate(getLayout(), parent, false);
+            convertView = inflater.inflate(getLayout(getItemViewType(position)), parent, false);
             AutoUtils.autoSize(convertView);
-            vh = getViewHolder(convertView);
+            vh = getViewHolder(convertView,getItemViewType(position));
             convertView.setTag(vh);
         } else {
             vh = (VH) convertView.getTag();
         }
-        if (position < list.size()) {
-            onBindViewHolder(vh, list.get(position), position,parent);
+        if (position < getCount()) {
+            onBindViewHolder(vh, list.size()==0?null:list.get(position), position,parent);
         }
         if (position == selectIndex) {
             convertView.setSelected(true);
@@ -151,9 +155,9 @@ public abstract class RBaseAdapter<T, VH extends RBaseAdapter.ViewHolder> extend
     }
 
     public abstract void onBindViewHolder(VH holder, T item, int position,View parent);
-    public abstract int getLayout();
+    public abstract int getLayout(int viewType);
 
-    public abstract VH getViewHolder(View view);
+    public abstract VH getViewHolder(View view,int viewType);
 
     public static class ViewHolder {
 

@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/activity_setting"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="vertical">
 
@@ -18,7 +18,7 @@
         <com.forest.market.widget.RefreshRecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></com.forest.market.widget.RefreshRecyclerView>
+            android:layout_height="wrap_content"></com.forest.market.widget.RefreshRecyclerView>
     </LinearLayout>
     <ImageView
         android:id="@+id/iv_add"

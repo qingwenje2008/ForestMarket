@@ -20,12 +20,12 @@ public class MyDataAdapter extends RBaseAdapter {
     }
 
     @Override
-    public int getLayout() {
+    public int getLayout(int viewType) {
         return 0;
     }
 
     @Override
-    public ViewHolder getViewHolder(View view) {
+    public ViewHolder getViewHolder(View view,int viewType) {
         return null;
     }
 }

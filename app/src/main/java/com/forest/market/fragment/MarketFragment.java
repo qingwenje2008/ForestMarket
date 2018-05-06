@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.forest.market.R;
 import com.forest.market.activity.market.SendMarketActivity;
-import com.forest.market.adapter.commonweal.CommonwealAdapter;
 import com.forest.market.adapter.market.MarketAdapter;
 import com.forest.market.fragment.base.BaseFragment;
 import com.forest.market.util.ToastUtil;

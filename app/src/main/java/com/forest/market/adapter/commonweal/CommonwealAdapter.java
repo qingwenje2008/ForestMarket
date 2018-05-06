@@ -46,7 +46,7 @@ public class CommonwealAdapter extends RecyclerBaseAdapter<Object,CommonwealAdap
         public ViewHolder(View itemView) {
 
             super(itemView);
-            tv_btn = (Button) itemView.findViewById(R.id.tv_btn);
+//            tv_btn = (Button) itemView.findViewById(R.id.tv_btn);
 //            iv_num = (ImageView) itemView.findViewById(R.id.iv_num);
 //            tv_nickname = (TextView) itemView.findViewById(R.id.tv_nickname);
 //            tv_type_god = (TextView) itemView.findViewById(R.id.tv_type_god);

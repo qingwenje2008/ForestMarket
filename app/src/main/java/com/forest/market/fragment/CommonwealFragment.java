@@ -3,6 +3,7 @@ package com.forest.market.fragment;
 import android.app.Activity;
 import android.support.v7.widget.GridLayoutManager;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,11 +12,13 @@ import android.widget.Toast;
 import com.forest.market.R;
 import com.forest.market.adapter.base.RecyclerBaseAdapter;
 import com.forest.market.adapter.commonweal.CommonwealAdapter;
+import com.forest.market.adapter.commonweal.MRankAdapter;
 import com.forest.market.adapter.commonweal.RankAdapter;
 import com.forest.market.fragment.base.BaseFragment;
 import com.forest.market.util.ToastUtil;
 import com.forest.market.util.LogUtil;
 import com.forest.market.util.PopOptionUtil;
+import com.forest.market.widget.NoScrollerListView;
 import com.forest.market.widget.RefreshRecyclerView;
 
 import butterknife.BindView;
@@ -29,9 +32,8 @@ public class CommonwealFragment extends BaseFragment implements View.OnClickList
     @BindView(R.id.iv_add)
     ImageView iv_add;
     @BindView(R.id.recycler)
-    RefreshRecyclerView recycler;
-    RankAdapter adapter;
-
+    RefreshRecyclerView commonwealRecycler;
+    CommonwealAdapter commonwealAdapter;
     PopOptionUtil mPop;
     int width;
     int height;
@@ -43,15 +45,15 @@ public class CommonwealFragment extends BaseFragment implements View.OnClickList
         height = metric.heightPixels;   // 屏幕高度（像素）
         tv_title_name.setText("公益");
         iv_add.setOnClickListener(this);
-        adapter=new RankAdapter(context);
+        commonwealAdapter=new CommonwealAdapter(context);
         //配置当前的主recycler
-        recycler.setLayoutManager(new GridLayoutManager(context, 1));
+        commonwealRecycler.setLayoutManager(new GridLayoutManager(context, 1));
 //        recycler.setOnLongClickListener(this);
-       adapter.setOnItemLongClickListener(this);
-        recycler.addOnRefreshListener(this);
-        recycler.setRefreshMode(0);
-        recycler.setAdapter(adapter);
-        adapter.setOnItemClickListener(this);
+        commonwealAdapter.setOnItemLongClickListener(this);
+        commonwealRecycler.addOnRefreshListener(this);
+        commonwealRecycler.setRefreshMode(0);
+        commonwealRecycler.setAdapter(commonwealAdapter);
+        commonwealAdapter.setOnItemClickListener(this);
         mPop = new PopOptionUtil(context);
         mPop.setOnPopClickEvent(new PopOptionUtil.PopClickEvent() {
             @Override
@@ -64,6 +66,18 @@ public class CommonwealFragment extends BaseFragment implements View.OnClickList
                 Toast.makeText(context,"删除",Toast.LENGTH_SHORT).show();
             }
         });
+        addHeader();
+    }
+    public void addHeader(){
+        View view= LayoutInflater.from(context).inflate(R.layout.header_rank,null);
+        NoScrollerListView recycler = (NoScrollerListView) view.findViewById(R.id.rankRecycler);
+        MRankAdapter adapter=new MRankAdapter(context);
+        //配置当前的主recycler
+//        recycler.setLayoutManager(new GridLayoutManager(context, 1));
+//        adapter.setOnItemLongClickListener(this);
+        recycler.setAdapter(adapter);
+
+        commonwealRecycler.addHeaderView(view);
     }
 
     public static CommonwealFragment newInstance() {

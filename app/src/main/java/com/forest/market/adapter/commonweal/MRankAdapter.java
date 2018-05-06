@@ -2,55 +2,39 @@ package com.forest.market.adapter.commonweal;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.forest.market.R;
-import com.forest.market.adapter.base.RecyclerBaseAdapter;
+import com.forest.market.adapter.base.ListBaseAdapter;
+import com.forest.market.adapter.base.RBaseAdapter;
+import com.forest.market.util.LogUtil;
 
+/**
+ * Created by qingwenguo on 2018/5/6.
+ */
 
-public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHolder> {
-
+public class MRankAdapter extends RBaseAdapter<Object,RBaseAdapter.ViewHolder> {
     private int TYPE_BIG = 99;
     private int TYPE_SMALL = 101;
-    private RecyclerView.ViewHolder holder;
-    private Object item;
-    private int position;
-
-    @Override
-    public int getItemViewType(int position) {
-        if (position < 3) return TYPE_BIG;
-        return TYPE_SMALL;
-    }
-
-    public RankAdapter(Context context) {
+    View view = null;
+    public MRankAdapter(Context context) {
         super(context);
     }
 
-    View view = null;
-
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.i("guoguo", viewType + "-----viewType-");
-
-        if (viewType == TYPE_BIG) {
-            view = inflater.inflate(R.layout.item_rank_big, null);
-            return new ViewHolderBig(view);
-        } else {
-            view = inflater.inflate(R.layout.item_rank_small, null);
-            return new ViewHolderSmall(view);
-        }
-
+    public int getItemViewType(int position) {
+        if (position < 2) return TYPE_BIG;
+        return TYPE_SMALL;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, Object item, int position) {
-        if (holder instanceof ViewHolderBig) {
-            ViewHolderBig viewHolderBig= (ViewHolderBig) holder;
-
+    public void onBindViewHolder(ViewHolder holder, Object item, int position, View parent) {
+        if (holder instanceof MRankAdapter.ViewHolderBig) {
+            MRankAdapter.ViewHolderBig viewHolderBig= (MRankAdapter.ViewHolderBig) holder;
+            LogUtil.i(position+"");
             switch (position) {
                 case 0:
                     viewHolderBig.iv_fans_contribution_num.setImageResource(R.mipmap.fsgxb_1);
@@ -63,8 +47,8 @@ public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHo
                     break;
             }
 
-        } else if (holder instanceof ViewHolderSmall) {
-            ViewHolderSmall viewHolderSmall= (ViewHolderSmall) holder;
+        } else if (holder instanceof MRankAdapter.ViewHolderSmall) {
+            MRankAdapter.ViewHolderSmall viewHolderSmall= (MRankAdapter.ViewHolderSmall) holder;
             viewHolderSmall.tv_fans_contribution_num.setText(position+1+"");
 
 
@@ -72,11 +56,32 @@ public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHo
     }
 
     @Override
-    public int getItemCount() {
-        return 2;
+    public int getCount() {
+        return 5;
     }
 
-    protected class ViewHolderBig extends RecyclerView.ViewHolder {
+    @Override
+    public int getLayout(int viewType) {
+//        if (viewType == TYPE_BIG) {
+
+            return R.layout.item_rank_big;
+//        } else {
+//            return R.layout.item_rank_small;
+//        }
+    }
+
+    @Override
+    public ViewHolder getViewHolder(View view,int viewType) {
+//        if (viewType == TYPE_BIG) {
+            return new MRankAdapter.ViewHolderBig(view);
+//        } else {
+//            return new MRankAdapter.ViewHolderSmall(view);
+//        }
+
+    }
+
+
+    protected class ViewHolderBig extends ViewHolder {
         private TextView tv_fans_contribution_name;
         private TextView tv_fans_contribution_contri;
         private ImageView iv_fans_contribution_head;
@@ -91,7 +96,7 @@ public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHo
         }
     }
 
-    protected class ViewHolderSmall extends RecyclerView.ViewHolder {
+    protected class ViewHolderSmall extends ViewHolder {
         private TextView tv_fans_contribution_num;
         private TextView tv_fans_contribution_name;
         private TextView tv_fans_contribution_contri;
@@ -107,6 +112,4 @@ public class RankAdapter extends RecyclerBaseAdapter<Object, RecyclerView.ViewHo
         }
 
     }
-
-
 }

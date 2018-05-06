@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:padding="20px"
+    android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/tv_btn"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="标题" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
+        android:layout_marginTop="20px"
         android:layout_height="wrap_content"
         android:text="看看有没有" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_zhanwei"
+        android:layout_marginTop="20px"
+        />
 </LinearLayout>
